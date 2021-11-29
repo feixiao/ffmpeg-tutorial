@@ -762,7 +762,7 @@ int stream_component_open(VideoState *is, int stream_index) {
             NULL
         );
     codecCtx->get_buffer2 = our_get_buffer;
-    codecCtx->release_buffer = our_release_buffer;
+    //codecCtx->release_buffer = our_release_buffer;
     break;
   default:
     break;

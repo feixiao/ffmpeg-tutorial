@@ -359,7 +359,7 @@ int main(int argc, char *argv[]) {
         pCodecCtx->pix_fmt,
         pCodecCtx->width,
         pCodecCtx->height,
-        PIX_FMT_YUV420P,
+        AV_PIX_FMT_YUV420P,
         SWS_BILINEAR,
         NULL,
         NULL,

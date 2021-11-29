@@ -113,7 +113,7 @@ int main(int argc, char *argv[]) {
     return -1;
 
   // 即使分配了帧空间，我们仍然需要空间来存放转换时的 raw 数据，我们用 avpicture_get_size 来得到需要的空间，然后手动分配。
-  numBytes = avpicture_get_size(PIX_FMT_RGB24, pCodecCtx->width,
+  numBytes = avpicture_get_size(AV_PIX_FMT_RGB24, pCodecCtx->width,
 			      pCodecCtx->height);
   buffer = (uint8_t *)av_malloc(numBytes*sizeof(uint8_t));
 
@@ -123,7 +123,7 @@ int main(int argc, char *argv[]) {
               pCodecCtx->pix_fmt,
               pCodecCtx->width,
               pCodecCtx->height,
-              PIX_FMT_RGB24,
+              AV_PIX_FMT_RGB24,
               SWS_BILINEAR,
               NULL,
               NULL,
@@ -135,7 +135,7 @@ int main(int argc, char *argv[]) {
   // of AVPicture
   // 我们使用 avpicture_fill 来关联新分配的缓冲区的帧。 
   // AVPicture 结构体是 AVFrame 结构体的一个子集，开始的AVFrame 是和 AVPicture 相同的
-  avpicture_fill((AVPicture *)pFrameRGB, buffer, PIX_FMT_RGB24,
+  avpicture_fill((AVPicture *)pFrameRGB, buffer, AV_PIX_FMT_RGB24,
 		 pCodecCtx->width, pCodecCtx->height);
 
   // 通过包来读取整个视频流， 然后解码到帧当中，一但一帧完成了， 将转换并保存它
