@@ -1,10 +1,14 @@
 #
 # http://www.gnu.org/software/make/manual/make.html
-#
-CC:=gcc
+
+
+#CC:=gcc
+CC:=clang
 INCLUDES:=$(shell pkg-config --cflags sdl)
 
-FFMPEG_PATH=/home/frank/forbuild/dist/ffmpeg-4.2.2
+
+#FFMPEG_PATH=/home/frank/forbuild/dist/
+FFMPEG_PATH=/Users/frank/forbuild/dist
 # libavformat libavcodec libswresample libswscale
 INCLUDES += -I${FFMPEG_PATH}/include 
 
