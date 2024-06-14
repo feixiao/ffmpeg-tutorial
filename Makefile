@@ -3,12 +3,14 @@
 
 
 #CC:=gcc
-CC:=clang
+CC:=clang -arch x86_64
+
+
 INCLUDES:=$(shell pkg-config --cflags sdl)
 
 
 #FFMPEG_PATH=/home/frank/forbuild/dist/
-FFMPEG_PATH=/Users/frank/forbuild/dist
+FFMPEG_PATH=/Users/frank/forbuild/dist/x86_64
 # libavformat libavcodec libswresample libswscale
 INCLUDES += -I${FFMPEG_PATH}/include 
 

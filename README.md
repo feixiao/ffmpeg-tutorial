@@ -23,9 +23,12 @@ I won't be maintaining this project anymore, and am keeping it here for historic
 
 ```shell
 wget https://ffmpeg.org/releases/ffmpeg-4.4.tar.gz
-./configure --prefix=../dist
+./configure --enable-cross-compile --prefix=../dist/x86_64 --arch=x86_64 --cc='clang -arch x86_64'
 make -j8
 make install
+
+# 清理
+make distclean
 ```
 
 - 编译本教程代码，通过如下命令：
