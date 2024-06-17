@@ -13,9 +13,11 @@ I won't be maintaining this project anymore, and am keeping it here for historic
 
 #### 环境说明：
 
-- Ubuntu 16.04.1 LTS(不支持 OSX)
+- Ubuntu 16.04.1 LTS
 - FFmpeg 2.8.7
 - SDL 1.2
+
+注：不支持 OSX，不支持 WSL
 
 #### 编译运行
 
