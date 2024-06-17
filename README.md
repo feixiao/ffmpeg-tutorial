@@ -13,7 +13,7 @@ I won't be maintaining this project anymore, and am keeping it here for historic
 
 #### 环境说明：
 
-- Ubuntu 16.04.1 LTS
+- Ubuntu 16.04.1 LTS(不支持 OSX)
 - FFmpeg 2.8.7
 - SDL 1.2
 
@@ -27,9 +27,14 @@ wget https://ffmpeg.org/releases/ffmpeg-4.4.tar.gz
 make -j8
 make install
 
+
+lipo -info ../dist/x86_64/lib/libavcodec.a
+
 # 清理
 make distclean
 ```
+
+注：/opt/homebrew/opt/目标下面的库文件是通过 arm64 架构编译的 ?
 
 - 编译本教程代码，通过如下命令：
 

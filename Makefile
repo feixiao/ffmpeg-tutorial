@@ -2,8 +2,8 @@
 # http://www.gnu.org/software/make/manual/make.html
 
 
-#CC:=gcc
-CC:=clang -arch x86_64
+CC:=gcc
+#CC:=clang -arch x86_64 
 
 
 INCLUDES:=$(shell pkg-config --cflags sdl)
